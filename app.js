@@ -1,5 +1,4 @@
 'use strict';
-
 const hostname = '127.0.0.1';
 const port = 3333;
 
@@ -12,9 +11,9 @@ app.engine('html', es6Renderer);
 app.set('views', './views');
 app.set('view engine', 'html');
 
-const server = http.createServer(app);
+const server = require('http').createServer(app);
 
-server.listen(PORT, HOSTNAME, () => {
+server.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}`)
 });
 
